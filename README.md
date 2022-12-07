@@ -14,9 +14,6 @@ To contributes to the project, you follow these steps:<br>
     On your terminal, create a new branch and name the branch according to the name of the page you are working on (git checkout -b nameofbranch)
   </li>
   <li>
-    On your terminal, (git pull https://github.com/zuri-training/Team-Kuduw2-Alumni-Donate.git main). This is so that you will be able to request to merge to the main branch.
-  </li>
-  <li>
     On your code editor, make the changes you want to make to the page you are working on.
   </li>
   <li>
@@ -24,6 +21,9 @@ To contributes to the project, you follow these steps:<br>
   </li>
   <li>
     On your terminal, commit those modifications (git commit -m "message")
+  </li>
+  <li>
+    On your terminal, pull latest changes from repository (git pull https://github.com/zuri-training/Team-Kuduw2-Alumni-Donate.git main)
   </li>
   <li>
     On your terminal, push the changes (git push  --set-upstream origin nameofbranch)
