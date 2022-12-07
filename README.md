@@ -27,7 +27,13 @@ To team members:<br>
     Logos go into the "logo" folder.
   </li>
   <li>
-    Back-end files go into the "Back-end" folder.
+    Back-end files go into the "backend" folder.
+  </li>
+  <li>
+    PHP files go directly into the "backend" folder.
+  </li>
+  <li>
+    sql files go into the "database" folder.
   </li>
  
 </ul>
