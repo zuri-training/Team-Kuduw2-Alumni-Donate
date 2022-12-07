@@ -4,8 +4,35 @@ A team working on a website that allows organizations to invite their alumni to 
 Project Title : Alumni-Donate
 <br>
 <br>
+
+<h3>Project Structure</h3>
 To team members:<br>
-To contributes to the project, you follow these steps:<br>
+<ul>
+  <li>
+    Front-end files go into the "Front-end" folder.
+  </li>
+  <li>
+    HTML documents go into the "pages" folder.
+  </li>
+  <li>
+    Stylesheets go into the "css" folder in the "assets" folder.
+  </li>
+  <li>
+    Scripts go into the "js" folder in the "assets" folder.
+  </li>
+  <li>
+    Images go into the "images" folder.
+  </li>
+  <li>
+    Logos go into the "logo" folder.
+  </li>
+  <li>
+    Back-end files go into the "Back-end" folder.
+  </li>
+ 
+</ul>
+<br>
+To contribute to the project, you follow these steps:<br>
 <ol>
   <li>
     On your terminal, clone the base files on the main branch to your local machine (git clone  https://github.com/zuri-training/Team-Kuduw2-Alumni-Donate.git)
