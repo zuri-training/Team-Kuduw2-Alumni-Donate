@@ -399,10 +399,21 @@ hr {
         width: 14vw;
     }
     .available-donation-container {
-        width: 98vw;
+        display: block;
+        width: 70vw;
     }
     .available-donation-tab {
-        width: 40%;
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+    .available-donation-container .available-donation-tab hr {
+        width: 95%;
+    }
+    .available-donation-tab-add {
+        margin-bottom: 10vh;
+    }
+    .project-info .project-title h3 {
+        padding-bottom: 3vh;
     }
     footer h3 {
         font-size: 13px;
@@ -476,7 +487,7 @@ hr {
         font-size: 13px;
     }
 }
-@media screen and (max-width:424px) {
+@media screen and (max-width:425px) {
     * {
         font-size: 11px;
     }
@@ -498,12 +509,7 @@ hr {
     .project-info .project-tag {
         width: 22vw;
     }
-    .available-donation-container {
-        width: 100vw;
-    }
-    .available-donation-tab {
-        width: 50%;
-    }
+    
     footer h3 {
         font-size: 13px;
     }
