@@ -213,7 +213,17 @@ hr {
     height: 6vh;
     font-size: 5vh;
     color: #FFFFFF;
-    margin: 7vh;
+}
+.available-donation-tab-add {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 10vh; */
+}
+.available-donation-tab-add p {
+    color: #FF9F1C;
+    padding-left: 10vh;
 }
 /*NOTIFICATION PAGE*/
 .notification-main-container {
@@ -406,6 +416,9 @@ hr {
     .img-container, .footer-flex {
         padding: 20px;
     }
+    .available-donation-container .available-donation-tab-add p {
+        padding-left: 6vh;
+    }
     /* .whiterspace {
         height: 46vh;
     } */
@@ -440,6 +453,10 @@ hr {
     .main-logo-container img {
         width: 80px;
     }
+    /* .available-donation-tab-add button {
+        width: 3vh;
+        height: 3vh;
+    } */
 }
 @media screen and (max-width:444px) {
     .go-home-button button {
@@ -447,6 +464,13 @@ hr {
     }
     .notification-info-container .notification-available .absolute {
         right: 16%;
+    }
+    /* .available-donation-container .available-donation-tab-add {
+        padding-left: 0;
+    } */
+    .available-donation-container .available-donation-tab-add p {
+        padding-left: 3vh;
+        font-size: 13px;
     }
 }
 @media screen and (max-width:424px) {
