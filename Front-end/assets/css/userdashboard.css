@@ -225,6 +225,9 @@ hr {
     color: #FF9F1C;
     padding-left: 10vh;
 }
+.available-donation-tab-add button {
+    overflow-y: hidden;
+}
 /*NOTIFICATION PAGE*/
 .notification-main-container {
     width: 77vw;
@@ -465,9 +468,9 @@ hr {
     .notification-info-container .notification-available .absolute {
         right: 16%;
     }
-    /* .available-donation-container .available-donation-tab-add {
+    .available-donation-container .available-donation-tab-add {
         padding-left: 0;
-    } */
+    }
     .available-donation-container .available-donation-tab-add p {
         padding-left: 3vh;
         font-size: 13px;
