@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Front-end/assets/css/userdashboard.css">
-    <title>Dashboard</title>
+    <title>Notifications</title>
 </head>
 <body>
     <main class="main-container">
@@ -14,7 +14,7 @@
                 <a href="/Front-end/pages/index.html"><img src="/Front-end/assets/logo/alumni donate logo.png" alt="Org Logo"></a>
             </div> <!--End of org logo markup--> <br>
             <a href="/Front-end/pages/userdashboard.html">
-                <div class="account-logo-container" id="active">
+                <div class="account-logo-container">
                     <div class="acc-content">
                         <img src="/Front-end/assets/logo/account logo.png" alt="" width="20px" height="20px">
                     </div>
@@ -24,7 +24,7 @@
                 </div>
             </a> <!--End of account markup--> <br>
             <a href="/Front-end/pages/usernotification.html">
-                <div class="notification-logo-container">
+                <div class="notification-logo-container" id="active">
                     <div class="notification-content">
                         <img src="/Front-end/assets/logo/notification logo.png" alt="" width="20px" height="20px">
                     </div>
@@ -57,60 +57,29 @@
             <div class="whiterspace">2</div>
         </div> <!--End of Sidebar Container markup-->
 
-        <div class="content-container"> <!--Beginning of Content Container markup-->
-            <div class="acc-info-container">
+        <div class="notification-main-container"> <!--Beginning of Content Container markup-->
+            <div class="notification-info-container">
                 <div class="go-home-button">
                     <button onclick="document.location='/Front-end/pages/index.html'">Go Home</button>
                 </div>
-                <div class="acct-header">
-                    <h1>Account<h1>
+                <div class="acct-header notifheader">
+                    <h1>Notification<h1>
                 </div>
-                <div class="acct-info">
-                    <div class="profile-pic">
-                        <img src="/Front-end/assets/images/21284053.jpg" alt="profile picture" width="80px" height="80px">
+                <!-- <div class="whitestspace">1</div> -->
+                <div class="notification-available">
+                    <div class="absolute">
+                        <img src="/Front-end/assets/images/notification-pic.png" alt="n/a logo">
+                    <div class="firstline">Nothing here!!!</div>
+                    <div class="secondline">No notification yet, check back later.</div>
                     </div>
-                    <div class="profile-info">
-                        <p class="acc-name"><strong><h3>John Doe</h3></strong></p>
-                        <p class="acc-email">johndoe@gmail.com</p>
-                        <p class="acc-studentid">I4G0123456XYZ</p>
-                    </div>
+                    
                 </div>
-
-            </div> <!--End of acct info markup-->
-            <div class="available-donation-container">
-                <div class="available-donation-tab">
-                    <a href="#">
-                        <img src="/Front-end/assets/images/project-pic.jpg" alt="project picture" width="100%" height="200px">
-                    <div class="project-info">
-                        <div class="project-tag">EDUCATION</div>
-                        <div class="project-title"><h3>Project Donation Title</h3></div>
-                        <div class="funding-info top">
-                            <div class="left">100%</div>
-                            <div class="right">N200,000/N200,000</div>
-                        </div>
-                        <hr>
-                        <div class="funding-info bottom">
-                            <div class="left">Status</div>
-                            <div class="right">FUNDED</div>
-                        </div>
-                        <hr>
-                        <div class="lastinfo">
-                            <img src="/Front-end/assets/images/janedoe-pic2.png" alt="">
-                            <div>Jane Doe</div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="available-donation-tab-add">
-                    <button>+</button>
-                </div>
-            </div> <!--End of available donation markup-->
         </div> <!--End of Content Container markup-->
     </main>
     <footer>
         <section class="section-center">
         <div class="img-container">
-            <img src="/Front-end/assets/logo/alumni donate logo 2.png" alt="Org Logo">
+            <img src="/Front-end/assets/logo/alumni donate logo 2.png" alt="">
         </div>
         <section class="footer-flex">
             <article>
