@@ -47,7 +47,7 @@
                 </div>
             </a> <!--End of donation markup--> <br>
             <div class="whitespace">1</div>
-            <a href="../pages/index.html">
+            <a href="../../backend/logout.php">
                 <div class="logout-logo-container">
                     <div class="logout-content">
                         <img src="../assets/logo/logout logo.png" alt="" width="20px" height="20px">
