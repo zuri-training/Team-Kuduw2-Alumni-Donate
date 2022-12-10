@@ -65,3 +65,18 @@ To contribute to the project, you follow these steps:<br>
     Go to github and create a pull request.
   </li>
 </ol>
+
+<h3>Database Structure</h3>
+To use the backend functionality, please follow these steps to create a database:<br>
+<ol>
+<li>Open your PHPMyAdmin and create a database called alumnidonate.</li>
+<li>Create a table called users with the following columns:<br>
+id<br>
+fullName<br>
+email<br>
+password<br>
+schoolName<br>
+matricNumber<br>
+level</li>
+</ol>
+Depending on the setup of accounts in your PHPMy Admin, you may need to modify the configuration file in backend/comfig.php
