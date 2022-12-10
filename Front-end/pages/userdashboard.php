@@ -47,7 +47,7 @@
                 </div>
             </a> <!--End of donation markup--> <br>
             <div class="whitespace">1</div>
-            <a href="../pages/index.html">
+            <a href="../../backend/logout.php">
                 <div class="logout-logo-container">
                     <div class="logout-content">
                         <img src="../assets/logo/logout logo.png" alt="" width="20px" height="20px">
@@ -73,9 +73,9 @@
                         <img src="../assets/images/21284053.jpg" alt="profile picture" width="80px" height="80px">
                     </div>
                     <div class="profile-info">
-                        <p class="acc-name"><strong><h3>John Doe</h3></strong></p>
-                        <p class="acc-email">johndoe@gmail.com</p>
-                        <p class="acc-studentid">I4G0123456XYZ</p>
+                        <p class="acc-name"><strong><h3><?php session_start(); if(isset($_SESSION)){ echo $_SESSION['fullName'];} ?></h3></strong></p>
+                        <p class="acc-email"><?php if(isset($_SESSION)){ echo $_SESSION['email'];} ?></p>
+                        <p class="acc-studentid"><?php if(isset($_SESSION)){ echo $_SESSION['matricNumber'];} ?></p>
                     </div>
                 </div>
 
