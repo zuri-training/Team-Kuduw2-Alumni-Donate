@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,97 +8,104 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Log In</title>
 </head>
+
 <body>
-       <!-- 
+    <!-- 
         header
      -->
- <header class="section-center">
-    <nav class="login-nav navbar">
-       <div class="img">
-        <img src="../assets/images/logo-nav.png" alt="">
-       </div>
-       <div class="btn go-home">
-      <a href="" class="btn go-home">go home</a>
-       </div>
+    <header class="section-center">
+        <nav class="login-nav navbar">
+            <div class="img">
+                <img src="../assets/images/logo-nav.png" alt="">
+            </div>
+            <div class="btn go-home">
+                <a href="" class="btn go-home">go home</a>
+            </div>
 
-    </nav>
-    <h1>sign in</h1>
+        </nav>
+        <h1>sign in</h1>
 
- </header>
- <main>
-    <form class='section-center sign-up'>
-        <article>
-        
-        <p>Full Name</p>
-        <input type="email" name="" placeholder="Enter username" id="email" ></article>
-        <article>
-        <p>student ID</p>
-        <input type="password" name="" id="student-id" placeholder="Enter student ID" ></article>
-        <div >
-     <a href="#"class="login sign-upp"  id="login">login</a >
-     <div class="flex">
-        <p>forgot password ?<span class="span"><a href=""> recover here!</span</a></p>
-      </div>  <div class="below">
-    <p>Don't have an account?</p>
-    <a href="" class="trans">Sign up</a></div>
-   </div>
-   
-   </form>
-   
- 
- </main>
- <footer>
-    <section class="section-center">
-    <div class="img-container">
-        <img src="../assets/images/Logo.svg" alt="">
-    </div>
-    <section class="footer-flex">
-        <article>
-            <h3>company</h3>
-            <ul>
-                <li>about us</li>
-                <li>get in touch</li>
-                <li>terms of services</li>
-                <li>privacy policy</li>
-            </ul>
-        </article>
-        <article>
-            <h3>resources</h3>
-            <ul>
-                <li><a href="">how it works</a></li>
-                <li><a href="">white paper</a></li>
-               
-            </ul>
-        </article>
-        <article>
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">Campaigns</a></li>
-                <li><a href="">FAQs</a></li>
-            </ul>
-        </article>
-        <article>
-            <h3>community</h3>
-            <ul class="grid">
-                <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
-                    <i class="fab fa-facebook"></i>
-                  </a></li>
-                  <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
-                    <i class="fab fa-twitter"></i>
-                  </a></li>
-                  <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
-                    <i class="fab fa-instagram"></i>
-                  </a></li> 
-                  <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
-                    <i class="fab fa-linkedin"></i>
-                  </a></li> 
-            </ul>
-        </article>
+    </header>
+    <main>
+        <form class='section-center sign-up' method="POST" action="../../backend/action.php">
+            <article>
 
-</section>
-</section>
- </footer>
-    <script src="/Front-end/assets/js/script.js"></script>
+                <p>Email Address</p>
+                <input type="email" name="email" placeholder="Enter username" id="email">
+            </article>
+            <article>
+                <p>Password</p>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+            </article>
+            <div>
+                <button type="submit" class="login sign-upp" name="login">Login</button>
+                <div class="flex">
+                    <p>forgot password ?<span class="span"><a href=""> recover here!</span< /a>
+                    </p>
+                </div>
+                <div class="below">
+                    <p>Don't have an account?</p>
+                    <a href="" class="trans">Sign up</a>
+                </div>
+            </div>
+
+        </form>
+
+
+    </main>
+    <footer>
+        <section class="section-center">
+            <div class="img-container">
+                <img src="../assets/images/Logo.svg" alt="">
+            </div>
+            <section class="footer-flex">
+                <article>
+                    <h3>company</h3>
+                    <ul>
+                        <li>about us</li>
+                        <li>get in touch</li>
+                        <li>terms of services</li>
+                        <li>privacy policy</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>resources</h3>
+                    <ul>
+                        <li><a href="">how it works</a></li>
+                        <li><a href="">white paper</a></li>
+
+                    </ul>
+                </article>
+                <article>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="">home</a></li>
+                        <li><a href="">Campaigns</a></li>
+                        <li><a href="">FAQs</a></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>community</h3>
+                    <ul class="grid">
+                        <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a></li>
+                        <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a></li>
+                        <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a></li>
+                        <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a></li>
+                    </ul>
+                </article>
+
+            </section>
+        </section>
+    </footer>
+    <!-- <script src="/Front-end/assets/js/script.js"></script> -->
 </body>
+
 </html>

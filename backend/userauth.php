@@ -44,7 +44,9 @@ function loginUser($email, $password){
         if ($rows == 1) {
             $details = mysqli_fetch_assoc($result);
             session_start();
-            $_SESSION["username"] = $details["full_names"];
+            $_SESSION["fullName"] = $details["fullName"];
+            $_SESSION["email"] = $details["email"];
+            $_SESSION["matricNumber"] = $details["matricNumber"];
             header("location: ..\Front-end\pages\userdashboard.php");
         }
         else {
