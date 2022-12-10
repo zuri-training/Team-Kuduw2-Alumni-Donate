@@ -32,8 +32,6 @@ function registerUser($fullname, $email, $password, $schoolName, $matricNumber, 
 function loginUser($email, $password){
     //create a connection variable using the db function in config.php
     $conn = db();
-
-    echo "<h1 style='color: red'> LOG ME IN (IMPLEMENT ME) </h1>";
     //open connection to the database and check if username exist in the database
     //if it does, check if the password is the same with what is given
     //if true then set user session for the user and redirect to the dasbboard
@@ -60,7 +58,6 @@ function loginUser($email, $password){
 function resetPassword($email, $password){
     //create a connection variable using the db function in config.php
     $conn = db();
-    echo "<h1 style='color: red'>RESET YOUR PASSWORD (IMPLEMENT ME)</h1>";
     //open connection to the database and check if username exist in the database
     //if it does, replace the password with $password given
     $query = "UPDATE users SET password = '$password' WHERE email = '$email';";
@@ -71,7 +68,6 @@ function resetPassword($email, $password){
         else {
             echo "Error updating password. Please try again. ";
         }
-        mysqli_close($conn);
      }
      mysqli_close($conn);
 }
@@ -107,19 +103,3 @@ function getusers(){
     //return users from the database
     //loop through the users and display them on a table
 }
-
- function deleteaccount($id){
-    $conn = db();
-
-     //delete user with the given id from the database
-    $query = "DELETE FROM students WHERE id = $id";
-     if ($conn) {
-        if (mysqli_query($conn, $query)) {
-            echo "Student data successfully Deleted";
-        }
-        else {
-            echo "Error deleting student data. Please try again. ";
-        }
-        mysqli_close($conn);
-     }
- }

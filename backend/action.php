@@ -27,11 +27,6 @@ switch(true){
         resetPassword($email, $password);
         break;
 
-    case isset($_POST["delete"]):
-        $id = $_POST['id'];
-        deleteaccount($id);
-        break;
-        
     case isset($_GET["all"]):
         getusers();
         break;
