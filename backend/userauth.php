@@ -1,6 +1,6 @@
 <?php
 
-require_once "../config.php";
+require_once "config.php";
 
 //register users
 function registerUser($fullname, $email, $password, $schoolName, $matricNumber, $level){
