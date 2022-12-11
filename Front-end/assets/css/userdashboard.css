@@ -291,12 +291,15 @@ hr {
   }
   footer a {
     color: #ffffff;
+    text-decoration: none;
+  }
+  footer li:hover {
+    color: #FF9F1C;
   }
   footer ul li {
     margin-bottom: 10px;
     text-transform: capitalize;
     list-style-type: none;
-    text-decoration: none;
   }
   .img-container {
     display: inline-block;
@@ -353,7 +356,7 @@ hr {
 
 @media screen and (max-width: 999px) {
     .go-home-button button {
-        width: 9vw;
+        width: 11vw;
     }
     .available-donation-container {
         width: 83vw;

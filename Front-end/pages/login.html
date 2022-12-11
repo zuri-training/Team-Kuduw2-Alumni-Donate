@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>Log In</title>
 </head>
 
@@ -19,7 +22,7 @@
                 <img src="../assets/images/logo-nav.png" alt="">
             </div>
             <div class="btn go-home">
-                <a href="" class="btn go-home">go home</a>
+                <a href="../pages/index.html" class="btn go-home">go home</a>
             </div>
 
         </nav>
@@ -38,14 +41,14 @@
                 <input type="password" name="password" id="password" placeholder="Enter your password">
             </article>
             <div>
-                <button type="submit" class="login sign-upp" name="login">Login</button>
+                <button type="submit" class="login sign-upp" name="login" onclick="document.location='../pages/userdashboard.php'">Log in</button>
                 <div class="flex">
-                    <p>forgot password ?<span class="span"><a href="resetpassword.html"> recover here!</span< /a>
+                    <p>forgot password ?<span class="span"><a href="resetpassword.html"> recover here!</a></span> 
                     </p>
                 </div>
                 <div class="below">
                     <p>Don't have an account?</p>
-                    <a href="signup.html" class="trans">Sign up</a>
+                    <a href="../pages/signup.html" class="trans">Sign up</a>
                 </div>
             </div>
 
@@ -62,43 +65,43 @@
                 <article>
                     <h3>company</h3>
                     <ul>
-                        <li>about us</li>
-                        <li>get in touch</li>
-                        <li>terms of services</li>
-                        <li>privacy policy</li>
-                    </ul>
-                </article>
-                <article>
-                    <h3>resources</h3>
-                    <ul>
-                        <li><a href="">how it works</a></li>
-                        <li><a href="">white paper</a></li>
-
-                    </ul>
-                </article>
-                <article>
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="">home</a></li>
-                        <li><a href="">Campaigns</a></li>
-                        <li><a href="">FAQs</a></li>
-                    </ul>
+                        <li><a href="../pages/documentation.html"> about us</a></li>
+                    <li><a href="#"> get in touch</a></li>
+                    <li><a href="#"> terms of services</a></li>
+                    <li><a href="#"> privacy policy</a></li>
+                </ul>
+            </article>
+            <article>
+                <h3>resources</h3>
+                <ul>
+                    <li><a href="../pages/index.html">how it works</a></li>
+                    <li><a href="#">white paper</a></li>
+                   
+                </ul>
+            </article>
+            <article>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../pages/index.html">home</a></li>
+                    <li><a href="#">Campaigns</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
                 </article>
                 <article>
                     <h3>community</h3>
                     <ul class="grid">
                         <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
-                                <i class="fab fa-facebook"></i>
-                            </a></li>
-                        <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
-                                <i class="fab fa-twitter"></i>
-                            </a></li>
-                        <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
-                                <i class="fab fa-instagram"></i>
-                            </a></li>
-                        <li> <a href="https://www.twitter.com" target="_blank" class="footer-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </a></li>
+                            <img src="../assets/logo/twitter logo.png" alt="">
+                          </a></li>
+                          <li> <a href="https://www.facebook.com" target="_blank" class="footer-icon">
+                            <img src="../assets/logo/facebook logo.png" alt="">
+                          </a></li>
+                          <li> <a href="https://www.instagram.com" target="_blank" class="footer-icon">
+                            <img src="../assets/logo/ig logo.png" alt="">
+                          </a></li> 
+                          <li> <a href="https://www.linkedin.com" target="_blank" class="footer-icon">
+                            <img src="../assets/logo/linkedin logo.png" alt="">
+                          </a></li> 
                     </ul>
                 </article>
 
