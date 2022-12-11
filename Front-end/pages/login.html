@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>Log In</title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.12.1-web/css/all.css">
 </head>
 
 <body>
@@ -20,10 +21,18 @@
         <nav class="login-nav navbar">
             <div class="img">
                 <img src="../assets/images/logo-nav.png" alt="">
-            </div>
-            <div class="btn go-home">
-                <a href="../pages/index.html" class="btn go-home">go home</a>
-            </div>
+               </div>
+               <div class="ul-nav">
+                <i class="fas fa-bars go-home toogle" id="nav-toogle"></i>
+                <ul class="hidden" id="ul">
+              <li class="btn"><a href="" >how it works</a></li>
+              <li class="btn"><a href="../pages/documentation.html">documentation</a></li>
+              <li class="btn"><a href="" >Fund request</a></li>
+              <li class="btn"><a href="./login.html">login</a></li>
+              <li class="btn"><a href="./signup.html">sign-up</a></li>
+                </ul>
+               
+               </div>
 
         </nav>
         <h1>sign in</h1>
@@ -40,8 +49,9 @@
                 <p>Password</p>
                 <input type="password" name="password" id="password" placeholder="Enter your password">
             </article>
+            <button type="submit" class="sign-upp" name="login" onclick="document.location='../pages/userdashboard.php'">Log in</button>
             <div>
-                <button type="submit" class="login sign-upp" name="login" onclick="document.location='../pages/userdashboard.php'">Log in</button>
+                
                 <div class="flex">
                     <p>forgot password ?<span class="span"><a href="resetpassword.html"> recover here!</a></span> 
                     </p>
@@ -108,6 +118,7 @@
             </section>
         </section>
     </footer>
+    <script src="../assets/js/signin.js"></script>
     <!-- <script src="/Front-end/assets/js/script.js"></script> -->
 </body>
 
