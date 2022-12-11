@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+:root {
+  --primary-color: #FFCA2C;
+  --secondary-color: #ddd;
+  --white-color: #fff;
+  --black-color: #3f3b51;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand{
+  width: 8em;
+}
+
+
+ .hero {
+  /* margin-top: -80px; */
+  background-image: url(../image/hero.jpg);
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+ }
+ .hero .small-title {
+   padding-top: 8%;
+   font-size: 12px;
+   color: var(--white-color);
+ }
+ .hero .title-text {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  font-size: 58px;
+  font-weight: 900;
+  /* padding-top: 15%; */
+ }
+
+ .btn-warning {
+  color: #fff;
+ }
+ .btn-warning:hover {
+  color: #fff;
+ }
+ .top_box {
+  padding: 3%;
+  width: 60%;
+  margin: 0 auto;
+  background-color: var(--white-color);
+  margin-top: -70px;
+ }
+ .tick-title {
+  font-weight: 900;
+  color: #000;
+ }
+
+ .number {
+  font-size: px;
+  font-weight: 600;
+  width: 50px;
+  height: 50px;
+  padding: 5%;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.trending {
+  color: var(--primary-color);
+  font-weight: 900;
+}
+.badge{
+  background-color: #eee;
+  padding: 3%;
+  color: #000;
+  
+}
+.line {
+  height: 2px;
+  background-color: #eee;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.margin_style{ 
+  margin-bottom: 20px;
+}
+
+.text_color{
+  color: #fff;
+  background: #161820;
+}
+
+
+.social_link a i {
+  color: #fff;
+}
+
+/* footer */
+
+.margin_style {
+  display: flex;
+  justify-content: center;
+  padding: 0 48px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 48px;
+}
+
+.section-subscribe {
+  padding: 5em 0;;
+}
+
+.form-control {
+  outline: none;
+  -webkit-box-shadow: 0 3px 10px -2px rgba(0,0,0,0.2) !important;
+  box-shadow: 0, 3px, 10px -2px rgb(0, 0, 0, 0.2) !important;
+}
+
+.form-control:focus, .form-control:active {
+  outline: none;
+}
+
+.btn {
+  -webkit-box-shadow: 0, 3px 10px -2px rgba(0,0,0,0.2) !important;
+  box-shadow: 0, 3px, 10px, -2px rgba(0,0,0,0.2) !important;
+}
+
+.btn.btn-secondary {
+  color: #fff;
+  border-width: 2px;
+  background: #bc5148;
+  border-color: #bc5148;
+  padding: 10px;
+}
+
+
+.site-footer {
+  padding: 5em 0;
+  background: #010101;
+  font-size: 14px;
+  color: #fff;
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer a:hover {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-footer h2 {
+  font-size: 22px;
+  margin-bottom: 28px;
+  letter-spacing: 0.5em;
+  color: #fff;
+}
+
+.site-footer .footer-link li {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.footer-social a {
+  line-height: 0;
+  border-radius: 50%;
+  margin: 0 5px 5px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: inline-block;
+}
+
+.footer-social a:hover {
+  background: #fff;
+  background-color: #fff;
+  color:#000;
+}
+
+.footer-social .fa {
+  margin-top:7px;
+}
+
