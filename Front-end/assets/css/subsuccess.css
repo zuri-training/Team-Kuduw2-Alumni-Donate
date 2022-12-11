@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    width: 70vh;
+    margin: auto;
+}
+
+main article {
+    padding: 5vh;
+}
+
+main article img {
+    width: 100%;
+    padding-top: 10vh;
+}
+
+main h2, main .button {
+    padding-bottom: 5vh;
+    text-align: center;
+}
+
+main button {
+    width: 16vw;
+    border: solid 1px #FF9F1C;
+    border-radius: 17px;
+    background-color: #FF9F1C;
+    color: #FFFFFF;
+    padding: 3vh;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 699px) {
+    main button {
+        font-size: 14px;
+        width: 22vw;
+        padding: 2vh;
+        border-radius: 22px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    main {
+        width: 40vh;
+    }
+    main button {
+        width: 26vw;
+    }
+}
