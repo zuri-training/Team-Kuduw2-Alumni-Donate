@@ -129,7 +129,7 @@
             <article>
                 <h3>resources</h3>
                 <ul>
-                    <li><a href="../pages/index.html/#">how it works</a></li>
+                    <li><a href="../pages/index.html">how it works</a></li>
                     <li><a href="#">white paper</a></li>
                    
                 </ul>
