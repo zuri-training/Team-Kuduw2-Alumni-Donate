@@ -317,6 +317,9 @@ footer ul li:hover a {
   color: var(--btn-color);
   transition: var(--transition);
 }
+footer img {
+  width: auto;
+}
 
 .container {
   display: flex;
