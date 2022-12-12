@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'inter';
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 75px;
+}
+
+nav a:nth-child(2) {
+  text-decoration: none;
+  color: white;
+  background-color: #FF7A00;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+header {
+  width: 100%;
+  position: relative;
+}
+
+header img {
+  width: 100%;
+}
+
+header h1 {
+  color: #FF7A00;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 10%;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+section {
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+}
+
+section p,
+section li {
+  line-height: 18px;
+  color: #42403E;
+  font-size: 12px;
+}
+
+section ul,
+section ol {
+  width: fit-content;
+  margin: auto;
+}
+
+section h1,
+section h2,
+section h3,
+section h4 {
+  text-align: center;
+  padding: 5px;
+}
+
+section h1 {
+  font-size: 50px;
+}
+
+section h2 {
+  color: #42403E;
+  font-size: 40px;
+}
+
+section h3 {
+  color: #42403E;
+  font-size: 20px;
+}
+
+section h4 {
+  padding: 20px;
+}
+
+.center-align {
+  text-align: center;
+  padding: 10px;
+}
+
+.width {
+  width: 60%;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border: 1px solid black;
+}
+
+th,
+td {
+  text-align: left;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 0;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    padding: 15px;
+  }
+
+  nav a:first-child img {
+    width: 75%;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  section {
+    width: 98%;
+    margin: auto;
+  }
+
+  section h1 {
+    font-size: 15px;
+  }
+
+  section h2 {
+    color: #42403E;
+    font-size: 15px;
+  }
+
+  section h3 {
+    color: #42403E;
+    font-size: 15px;
+  }
+
+  section h4 {
+    padding: 15px 0;
+  }
+
+  section ul,
+  section ol {
+    width: fit-content;
+    margin: unset;
+  }
+
+  table {
+    display: none;
+  }
+
+  .center-align {
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  .width {
+    width: 100%;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .mobile:last-child>ul>li {
+    font-weight: 700;
+  }
+}
