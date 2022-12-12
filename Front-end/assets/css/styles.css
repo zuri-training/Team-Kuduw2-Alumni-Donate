@@ -89,7 +89,12 @@ a {
   box-shadow: var(--dark-shadow);
   z-index: 2;
 }
-
+.boxx:hover{
+  transform:scale(1.02);
+  background: #90cfde;
+  transition: var(--transition);
+  cursor: pointer;
+}
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -160,11 +165,17 @@ a {
 }
 .go-home {
   background: var(--btn-color);
-  color: var(--white);
+  color: black;
   padding: 13px 17px;
   margin-right:5rem ;
   border-radius: 16px;
   text-transform: capitalize;
+  cursor: pointer;
+}
+.go-home:hover{
+  background: #90cfde;
+  transform: scale(1.02);
+  transition: var(--transition);
 }
 header {
   padding-top: 6rem;
@@ -226,7 +237,7 @@ form p {
   line-height: 29px;
 }
 input,
-button:not(.contact-center input,.contact-center){
+button{
   width: 200px;
   max-width: 678px;
   height: 53px;
@@ -244,10 +255,6 @@ button a {
   color: black;
 }
 
-form input[type="text"] {
-  font-size: 16px;
-  line-height: 19.36px;
-}
 .sign-up {
   display: grid;
   place-items: center;
@@ -309,8 +316,10 @@ footer ul li {
   display: grid;
   grid-template-columns: auto auto;
 }
-.footer-icon:hover {
-  color: var(--btn-color);
+
+
+.footer-icon:hover{
+  color: #ff7a00;
   transition: var(--transition);
 }
 footer ul li:hover a {
@@ -554,7 +563,7 @@ footer img {
     /* z-index:; */
 
 /* } */
-.progress-container {
+/* .progress-container {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -580,10 +589,10 @@ footer img {
   position: absolute;
   left: 0;
   height: 4px;
-  width: 0;
+  width:;
   z-index: -1;
   transition: 0.4s ease;
-}
+} */
 .extra {
   display: flex;
   justify-content: flex-start;
