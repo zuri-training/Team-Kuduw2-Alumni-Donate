@@ -1,0 +1,116 @@
+/***Global Styles***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+main .details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+main .details-container .details-tab {
+    padding: 5vh;
+    width: 30%;
+    font-size: 13px;
+}
+
+main .details-container button {
+    width: 90%;
+}
+main .details-container a {
+    text-decoration: none;
+    color: black;
+}
+
+main .details-container .add {
+    box-shadow: 2px 3px 5px ;
+    border-radius: 10px;
+    padding: 3vh;
+    margin-bottom: 4vh;
+}
+
+main .details-container .add a img {
+    margin: auto;
+    padding-bottom: 3vh;
+}
+main .details-container .add a p {
+    text-align: center;
+}
+
+main .details-container img {
+    width: 10vw;
+    height: 20vh;
+}
+
+.sub-blue {
+    background-color: #6BBED2;
+}
+
+.sub-blue .sub-blue-content {
+    padding: 0.5vh;
+}
+.sub-blue .terminal-top {
+    padding-top: 8vh;
+}
+.sub-blue .terminal-bot {
+    padding-bottom: 8vh;
+}
+
+/***MEDIA QUERIES***/
+
+@media screen and (max-width:767px) {
+    main .details-container .details-tab {
+        padding: 5vh;
+        width: 33%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    main .details-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    main .details-container .details-tab {
+        width: 70%;
+    }
+
+    main .details-container .mobile-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+    main .details-container img {
+        width: 15vw;
+    }
+    main .details-container .share {
+        text-align: center;
+    }
+    main .details-container .add {
+        margin-bottom: 0;
+    }
+    .sub-blue {
+        border-radius: 18px;
+    }
+    .sub-blue .terminal-top {
+        padding-top: 6vh;
+    }
+    .sub-blue .terminal-bot {
+        padding-bottom: 4vh;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    main .details-container .mobile-flex {
+        flex-direction: column;
+    }
+    main .details-container .add {
+        margin-bottom: 5vh;
+    }
+    main .details-container img {
+        width: 20vw;
+    }
+}
