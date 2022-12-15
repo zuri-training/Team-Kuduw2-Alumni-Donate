@@ -73,9 +73,10 @@
                         <img src="../assets/images/21284053.jpg" alt="profile picture" width="80px" height="80px">
                     </div>
                     <div class="profile-info">
-                        <p class="acc-name"><strong><h3><?php session_start(); if(isset($_SESSION)){ echo $_SESSION['fullName'];} ?></h3></strong></p>
-                        <p class="acc-email"><?php if(isset($_SESSION)){ echo $_SESSION['email'];} ?></p>
-                        <p class="acc-studentid"><?php if(isset($_SESSION)){ echo $_SESSION['matricNumber'];} ?></p>
+                        <p class="acc-name"><strong><h3><?php session_start();
+                        if(isset($_SESSION)){ echo $_SESSION['al_name'];} ?></h3></strong></p>
+                        <p class="acc-email"><?php if(isset($_SESSION)){ echo $_SESSION['al_email'];} ?></p>
+                        <p class="acc-studentid"><?php if(isset($_SESSION)){ echo $_SESSION['al_matricNumber'];} ?></p>
                     </div>
                 </div>
 
@@ -85,11 +86,22 @@
                     <a href="#">
                         <img src="../assets/images/project-pic.jpg" alt="project picture" width="100%" height="200px">
                     <div class="project-info">
-                        <div class="project-tag">EDUCATION</div>
-                        <div class="project-title"><h3>Project Donation Title</h3></div>
+                    <?php
+                    @session_start();
+include_once "connect_database.php";
+$conn = db();
+$sqlshow1 = "SELECT * FROM donation_data";
+$result1 = $conn->query($sqlshow1);
+
+while ($row=$result1->fetch_assoc()){ 
+    if($_SESSION['al_matricNumber']==$row['al_mat_no'])
+    {?>
+
+                        <div class="project-tag"><?=$row['title']?></div>
+                        <div class="project-title"><h3><?=$row['description']?></h3></div>
                         <div class="funding-info top">
                             <div class="left">100%</div>
-                            <div class="right">N200,000/N200,000</div>
+                            <div class="right">N200,000/N<?=$row['amount']?></div>
                         </div>
                         <hr>
                         <div class="funding-info bottom">
@@ -99,7 +111,7 @@
                         <hr>
                         <div class="lastinfo">
                             <img src="../assets/images/janedoe-pic2.png" alt="">
-                            <div>Jane Doe</div>
+                            <div><?=$row['name'];}}?></div>
                         </div>
                     </div>
                     </a>
