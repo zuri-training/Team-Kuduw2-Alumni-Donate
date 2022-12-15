@@ -21,7 +21,7 @@ if(isset($_POST['add_donation']))
 		if ($conn->query($sql) === TRUE) 
 		{
 	    	echo "<br /><p class=p1>*****Donation successfully created.*****</p>";
-			echo "<br /><p class=p2><a href=donation_record.php>View all Donation data</a></p>";
+			echo "<br /><p class=p2><a href=..\Front-end\pages\donationrecord.php>View all Donation data</a></p>";
             echo "<br /><p class=p2><a href=..\Front-end\pages\userdashboard.php>Click here</a> to return to your user dashboard</p>";
 			} 
 		else 

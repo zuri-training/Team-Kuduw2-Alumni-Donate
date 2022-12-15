@@ -48,7 +48,7 @@
 <body>
 <nav class="login-nav navbar">
       <div class="img">
-        <img src="../assets/images/logo-nav.png" alt="">
+        <a href="index.html"><img src="../assets/images/logo-nav.png" alt=""></a>
       </div>
       <div class="ul-nav">
         <i class="fas fa-bars go-home toogle" id="nav-toogle"></i>
