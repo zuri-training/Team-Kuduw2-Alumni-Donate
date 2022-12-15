@@ -1,3 +1,59 @@
+<?php
+include_once "connect_database.php";
+
+
+if(isset($_POST['register']))
+{
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $schoolName = $_POST['schoolName'];
+    $matricNumber = $_POST['matricNumber'];
+    $level = $_POST['level'];
+
+  $conn = db();
+    $query = "SELECT * FROM alumni_info WHERE al_email='$email'";
+    $result = mysqli_query($conn, $query);
+    if (mysqli_num_rows($result) > 0) {
+      echo "User already exists. Please <a href='/signup.php'>Click Here</a> to try again.";
+      exit;
+     }
+	
+	if ($fullname=='' || $email=='' || $matricNumber==""|| $schoolName=='' || $level=="" || $password=="")
+	{
+		echo "<br><br>";
+		echo "Incomplete information. Please try again.";
+		echo "<br/><br/>"; 
+		echo "Redirecting you back to main page in 10 seconds.";
+		echo "<br/><br/>"; 
+		echo "Or click <a href='./index.html'>here.</a>";
+		header("refresh:10;url=./index.html" );
+	}
+	else
+	{
+      $conn = db();
+      
+	
+      $register_alumni = "INSERT INTO alumni_info (al_name,al_mat_no,al_school,al_email, al_level, pwd ) 
+			VALUES ('$fullname', '$matricNumber', '$schoolName','$email', '$level','$password') ";
+
+		if ($conn->query($register_alumni)) 
+		{
+				include './subsuccess.html';
+			header("refresh:5;url=./login.php" );
+			
+		} 
+		else 
+		{
+    		echo "Error: " . $register_alumni . "<br>" . $conn->error;
+			header("refresh:10;url=./signup.php" );
+		}
+	}
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,8 +86,8 @@
       <li class="btn"><a href="../pages/index.html#workings" >how it works</a></li>
       <li class="btn"><a href="./documentation.html">documentation</a></li>
       <li class="btn"><a href="../pages/projects.html" >Fund request</a></li>
-      <li class="btn"><a href="./login.html">login</a></li>
-      <li class="btn"><a href="./signup.html">sign-up</a></li>
+      <li class="btn"><a href="./login.php">login</a></li>
+      <li class="btn"><a href="./signup.php">sign-up</a></li>
         </ul>
        
        </div>
@@ -48,7 +104,7 @@
 
   <main>
     <section class="">
-      <form class="sign-up" method="POST" action="../../backend/action.php">
+      <form class="sign-up" method="POST" action="?">
         <article>
           <p>Full Name</p>
           <input type="text" name="fullname" id="fullname" placeholder="Enter your first and last name" required>
@@ -72,7 +128,7 @@
         </article>
         <article>
           <p>Level</p>
-          <input type="text" name="level" id="level" placeholder="Enter your level" required>
+          <input type="text" name="level" id="level" placeholder="Enter your level" required/>
         </article>
 <button type="submit" class="box" name="register">Register</button>
         <div>
@@ -83,7 +139,7 @@
           </div>
           <div class="below">
             <p>already have an account?</p>
-            <a href="../pages/login.html" class="trans boxx">login</a>
+            <a href="login.php" class="trans boxx">login</a>
           </div>
 
         </div>

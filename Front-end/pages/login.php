@@ -1,3 +1,43 @@
+<?php
+include_once "connect_database.php";
+session_start();
+if(isset($_POST['login']))
+{
+
+	$email = $_POST["email"];
+	$password = $_POST["password"];
+	
+	
+	
+        $conn = db();
+		$al_result="SELECT * from alumni_info where 
+		al_email='$email' AND pwd='$password'";
+		$al_count=$conn->query($al_result);
+
+		if ($al_count && $al_count->num_rows = 1) 
+		{
+			while($al_row = $al_count->fetch_assoc()) 
+			{
+
+				$_SESSION['al_matricNumber']=$al_row['al_mat_no'];
+							$_SESSION['al_name']=$al_row['al_name'];
+                            $_SESSION['al_email']=$al_row['al_email'];
+
+							header("location:userdashboard.php");
+						
+					}
+   				}
+				   else
+				   {
+					   $al_message="Sorry Invalid Password or UserID. Please Try Again.";
+					   echo "<script>$al_message<?script>"; 
+					   header("refresh:3;url=index.php");
+
+				   }
+			}
+		
+		
+	?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,16 +45,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
-
-    <link rel="stylesheet" href="../assets/css/createdonation.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
-    <title>Create Donation</title>
-
+    <title>Log In</title>
     <link
       rel="stylesheet"
       href="../assets/fontawesome-free-5.12.1-web/css/all.css"
@@ -40,6 +77,9 @@
   </head>
 
   <body>
+    <!-- 
+        header
+     -->
     <header class="section-center">
       <nav class="login-nav navbar">
         <div class="img">
@@ -62,104 +102,56 @@
           </ul>
         </div>
       </nav>
+      <h1>sign in</h1>
     </header>
     <main>
-      <div class="details-container">
-        <div class="details-tab">
-          <div class="mobile-flex">
-            <div class="add">
-              <a href="form.html"
-                ><img src="../assets/images/add-btn.png" alt="" />
-                <p>Add details for Donation</p></a
-              >
-            </div>
-            <div class="sub-blue">
-              <p class="sub-blue-content terminal-top">
-                <a href="form.html">+ Add Title</a>
-              </p>
-              <p class="sub-blue-content">
-                <a href="form.html">+ Add Amount</a>
-              </p>
-              <p class="sub-blue-content terminal-bot">
-                <a href="form.html">+ Add Description</a>
-              </p>
-            </div>
-          </div>
+      <form
+        class="section-center sign-up"
+        method="POST"
+        action="?"
+      >
+        <article>
+          <p>Email Address</p>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter username"
+            id="email"
+          />
+        </article>
+        <article>
+          <p>Password</p>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+        </article>
+        <button
+          type="submit"
+          class=""
+          name="login"
+          onclick="document.location='../pages/userdashboard.php'"
+          class="boxx"
+        >
+          Log in
+        </button>
 
-          <div class="share">
+        <div>
+          <div class="flex">
             <p>
-              <button>
-                <span>
-                  Share Link
-                  <i class="fas fa-share-alt"></i>
-                </span>
-              </button>
-            </p>
-          </div>
-        </div>
-        <div class="details-tab">
-          <div class="mobile-flex">
-            <div class="add">
-              <a href="form.html"
-                ><img src="../assets/images/add-btn.png" alt="" />
-                <p>Add details for Donation</p></a
+              forgot password ?<span class="span"
+                ><a href="resetpassword.html"> recover here!</a></span
               >
-            </div>
-            <div class="sub-blue">
-              <p class="sub-blue-content terminal-top">
-                <a href="form.html">+ Add Title</a>
-              </p>
-              <p class="sub-blue-content">
-                <a href="form.html">+ Add Amount</a>
-              </p>
-              <p class="sub-blue-content terminal-bot">
-                <a href="form.html">+ Add Description</a>
-              </p>
-            </div>
-          </div>
-          <div class="share">
-            <p>
-              <button>
-                <span>
-                  Share Link
-                  <i class="fas fa-share-alt"></i>
-                </span>
-              </button>
             </p>
           </div>
-        </div>
-        <div class="details-tab">
-          <div class="mobile-flex">
-            <div class="add">
-              <a href="form.html"
-                ><img src="../assets/images/add-btn.png" alt="" />
-                <p><a href="form.html"></a>Add details for Donation</p></a
-              >
-            </div>
-            <div class="sub-blue">
-              <p class="sub-blue-content terminal-top">
-                <a href="form.html">+ Add Title</a>
-              </p>
-              <p class="sub-blue-content">
-                <a href="form.html">+ Add Amount</a>
-              </p>
-              <p class="sub-blue-content terminal-bot">
-                <a href="form.html">+ Add Description</a>
-              </p>
-            </div>
-          </div>
-          <div class="share">
-            <p>
-              <button>
-                <span>
-                  Share Link
-                  <i class="fas fa-share-alt"></i>
-                </span>
-              </button>
-            </p>
+          <div class="below">
+            <p>Don't have an account?</p>
+            <a href="../pages/signup.php" class="trans boxx">Sign up</a>
           </div>
         </div>
-      </div>
+      </form>
     </main>
     <footer>
       <section class="section-center">
@@ -239,3 +231,5 @@
     <!-- <script src="/Front-end/assets/js/script.js"></script> -->
   </body>
 </html>
+
+

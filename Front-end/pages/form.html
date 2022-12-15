@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Donation details</title>
+    <link
+      rel="stylesheet"
+      href="../assets/fontawesome-free-5.12.1-web/css/all.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/images/site.webmanifest" />
+    <style>
+      .section-center {
+        text-align: center;
+        margin-bottom: 86px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 
+        header
+     -->
+    <header class="section-center">
+      
+      <h4>Donation Details</h4>
+    </header>
+    <main>
+      <form
+        class="sign-up"
+        method="POST"
+        enctype="multipart/form-data"
+        action="./alumni_donation.php"
+      >
+     
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Your name"
+      />
+    </article>
+        <article>
+          
+          <input type="text" name="mat_no" placeholder="Your mattric number" id="mat_no" />
+        </article>
+        <article>
+          
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Donation title"
+          />
+        </article>
+          <input type="text" name="desc" placeholder="Donation description" id="desc" />
+        </article>
+        <article>
+          
+        <article>
+  
+          <input
+            type="text"
+            name="amount"
+            placeholder="Donation Amount"
+            id="pay_amount"
+          />
+        </article>
+       
+
+        <button type="submit" class="" name="add_donation" class="boxx">
+          Add Donation
+        </button>
+      </form>
+    </main>
+  </body>
+</html>
